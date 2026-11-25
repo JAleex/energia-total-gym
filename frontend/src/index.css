@@ -1,0 +1,45 @@
+/* Estilos generales de Energía Total Web */
+:root {
+  --color-principal: #ea580c;
+  --color-principal-oscuro: #c2410c;
+  --color-fondo: #f4f5f7;
+  --color-texto: #1f2937;
+  --color-gris: #6b7280;
+  --color-borde: #d1d5db;
+  --color-exito: #15803d;
+  --color-exito-fondo: #dcfce7;
+  --color-peligro: #b91c1c;
+  --color-peligro-fondo: #fee2e2;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 4px;
+}
+
+a {
+  color: var(--color-principal);
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 24px;
+  background: #111827;
+  color: white;
+}
+

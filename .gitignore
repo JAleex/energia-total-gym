@@ -1,0 +1,19 @@
+# Python / Django
+__pycache__/
+*.pyc
+venv/
+.venv/
+db.sqlite3
+staticfiles/
+
+# Node / React
+node_modules/
+dist/
+
+# Variables de entorno (contienen claves)
+.env
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
+~$*.docx

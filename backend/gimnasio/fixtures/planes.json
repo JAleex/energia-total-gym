@@ -1,0 +1,6 @@
+[
+  {"model": "gimnasio.plan", "pk": 1, "fields": {"nombre": "Día", "precio": 10000, "duracion_dias": 1}},
+  {"model": "gimnasio.plan", "pk": 2, "fields": {"nombre": "Mensual", "precio": 80000, "duracion_dias": 30}},
+  {"model": "gimnasio.plan", "pk": 3, "fields": {"nombre": "Trimestral", "precio": 210000, "duracion_dias": 90}},
+  {"model": "gimnasio.plan", "pk": 4, "fields": {"nombre": "Estudiante", "precio": 60000, "duracion_dias": 30}}
+]

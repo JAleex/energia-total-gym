@@ -1,0 +1,34 @@
+services:
+  # Base de datos PostgreSQL
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: energia_total
+      POSTGRES_USER: energia
+      POSTGRES_PASSWORD: energia123
+    volumes:
+      - datos_postgres:/var/lib/postgresql/data
+
+  # API en Django
+  backend:
+    build: ./backend
+    environment:
+      DB_HOST: db
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    restart: on-failure
+
+  # Interfaz en React
+  frontend:
+    build: ./frontend
+    environment:
+      API_URL: http://backend:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  datos_postgres:
