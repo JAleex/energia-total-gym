@@ -18,6 +18,18 @@ export default function App() {
         <Routes>
           {/* Páginas públicas */}
           <Route path="/login" element={<Login />} />
+          <Route path="/consulta" element={<ConsultaPlan />} />
+
+          {/* Páginas que piden iniciar sesión */}
+          <Route path="/" element={<RutaPrivada><Inicio /></RutaPrivada>} />
+          <Route path="/afiliados" element={<RutaPrivada><Afiliados /></RutaPrivada>} />
+          <Route path="/afiliados/nuevo" element={<RutaPrivada><AfiliadoForm /></RutaPrivada>} />
+          <Route path="/afiliados/:id" element={<RutaPrivada><AfiliadoForm /></RutaPrivada>} />
+          <Route path="/pagos" element={<RutaPrivada><Pagos /></RutaPrivada>} />
+          <Route path="/asistencia" element={<RutaPrivada><Asistencia /></RutaPrivada>} />
+
+          {/* Cualquier otra dirección */}
+          <Route path="*" element={<NoEncontrada />} />
         </Routes>
       </main>
     </>
